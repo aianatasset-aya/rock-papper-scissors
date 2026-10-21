@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="game">
+        <header class="header">
+            <span class="eyebrow">MINI GAME · BEST OF 3</span>
+            <h1>Камень, ножницы,<br><span>бумага.</span></h1>
+            <p class="subtitle">
+                Три раунда. Два соперника. Только один победитель.
+            </p>
+        </header>
+
+        <section class="scoreboard">
+            <div class="score-card">
+                <span class="score-label">ИГРОК</span>
+                <strong id="player-score">0</strong>
+            </div>
+
+            <div class="score-divider">:</div>
+
+            <div class="score-card">
+                <span class="score-label">КОМПЬЮТЕР</span>
+                <strong id="computer-score">0</strong>
+            </div>
+        </section>
+
+        <section class="round-info">
+            <span id="round-label">РАУНД 1 ИЗ 3</span>
+            <div class="round-track">
+                <div id="round-progress"></div>
+            </div>
+        </section>
+
+        <section class="battle">
+            <div class="fighter">
+                <span class="fighter-label">ТВОЙ ВЫБОР</span>
+                <div class="choice-display" id="player-display">?</div>
+                <span class="choice-name" id="player-choice">Ты</span>
+            </div>
+
+            <div class="versus">VS</div>
+
+            <div class="fighter">
+                <span class="fighter-label">СОПЕРНИК</span>
+                <div class="choice-display" id="computer-display">?</div>
+                <span class="choice-name" id="computer-choice">Компьютер</span>
+            </div>
+        </section>
+
+        <section class="result-panel" aria-live="polite">
+            <h2 id="result-title">Твой ход!</h2>
+            <p id="result-message">
+                Выбери один из трёх вариантов ниже.
+            </p>
+        </section>
+
+        <section class="controls">
+            <p class="controls-label">ВЫБЕРИ СВОЁ ОРУЖИЕ</p>
+
+            <div class="choice-buttons">
+                <button class="choice-btn" data-choice="камень">
+                    <span class="choice-symbol">●</span>
+                    <span>Камень</span>
+                </button>
+
+                <button class="choice-btn" data-choice="ножницы">
+                    <span class="choice-symbol scissors-symbol">✂</span>
+                    <span>Ножницы</span>
+                </button>
+
+                <button class="choice-btn" data-choice="бумага">
+                    <span class="choice-symbol paper-symbol">▤</span>
+                    <span>Бумага</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="game-over" id="game-over" hidden>
+            <h2 id="final-title">Игра окончена!</h2>
+            <p id="final-message"></p>
+            <button class="restart-btn" id="restart-btn">
+                Играть снова <span>↻</span>
+            </button>
+        </section>
+
+        <footer>
+            <span>ROCK · PAPER · SCISSORS</span>
+            <span>01 / 03 ROUNDS</span>
+        </footer>
+    </main>
+</body>
+</html>
